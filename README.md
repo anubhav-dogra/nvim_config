@@ -7,3 +7,16 @@
 # Credits
 
 1) Lazyvim starter https://github.com/LazyVim/starter as nvchad's starter was inspired by Lazyvim's . It made a lot of things easier!
+
+```bash
+sudo apt install luarocks
+```
+
+```bash
+# to set up clang-format in nvim if :MasonInstall clang-format fails:
+ln -sf /usr/bin/clang-format ~/.local/share/nvim/mason/bin/clang-format
+mkdir -p ~/.local/share/nvim/mason/packages/clang-format
+touch ~/.local/share/nvim/mason/packages/clang-format/MASON
+echo "/usr/bin/clang-format" > ~/.local/share/nvim/mason/packages/clang-format/exec
+chmod +x ~/.local/share/nvim/mason/packages/clang-format/exec
+```
