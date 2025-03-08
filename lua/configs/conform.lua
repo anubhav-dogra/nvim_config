@@ -4,6 +4,7 @@ local options = {
         -- c_cpp = {"clang-format"},
         cpp = { "clang-format" },
         c = { "clang-format" },
+        python = { "isort", "black" },
         -- css = { "prettier" },
         -- html = { "prettier" },
     },
@@ -39,19 +40,19 @@ local options = {
         --     },
         -- },
         -- -- Python
-        -- black = {
-        --     prepend_args = {
-        --         "--fast",
-        --         "--line-length",
-        --         "80",
-        --     },
-        -- },
-        -- isort = {
-        --     prepend_args = {
-        --         "--profile",
-        --         "black",
-        --     },
-        -- },
+        black = {
+            prepend_args = {
+                "--fast",
+                "--line-length",
+                "80",
+            },
+        },
+        isort = {
+            prepend_args = {
+                "--profile",
+                "black",
+            },
+        },
     },
 
     format_on_save = {

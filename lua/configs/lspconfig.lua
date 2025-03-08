@@ -8,10 +8,11 @@ local lspconfig = require("lspconfig")
 lspconfig.servers = {
     "lua_ls",
     "clangd",
+    "pyright",
 }
 
 -- list of servers configured with default config.
-local default_servers = {}
+local default_servers = { "pyright" }
 
 -- lsps with default config
 for _, lsp in ipairs(default_servers) do
@@ -49,6 +50,21 @@ lspconfig.clangd.setup({
     end,
     on_init = on_init,
     capabilities = capabilities,
+})
+
+lspconfig.pyright.setup({
+    -- cmd = { "pyright-langserver", "--stdio" },
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = {
+        python = {
+            pythonPath = "/usr/bin/python3",
+            analysis = {
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
+            },
+        },
+    },
 })
 
 lspconfig.lua_ls.setup({
