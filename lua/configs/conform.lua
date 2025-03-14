@@ -19,7 +19,11 @@ local options = {
                         UseTab: Never, \
                         AccessModifierOffset: 0, \
                         IndentAccessModifiers: true, \
-                        PackConstructorInitializers: Never}",
+                        PackConstructorInitializers: Never, \
+                        ColumnLimit: 120, \
+                        BreakBeforeBraces: Allman, \
+                        AllowShortFunctionsOnASingleLine: true, \
+                        BinPackArguments: false}",
             },
         },
         -- -- Golang
