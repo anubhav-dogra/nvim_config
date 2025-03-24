@@ -5,6 +5,7 @@ local options = {
         cpp = { "clang-format" },
         c = { "clang-format" },
         python = { "isort", "black" },
+        yaml = { "prettier" },
         -- css = { "prettier" },
         -- html = { "prettier" },
     },
