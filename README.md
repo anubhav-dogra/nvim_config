@@ -3,6 +3,11 @@
 sudo apt install luarocks xclip 
 ```
 
+```bash
+sudo apt update
+sudo apt install -y python3-venv python3-pip 
+```
+
 For Python
 ```bash
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
