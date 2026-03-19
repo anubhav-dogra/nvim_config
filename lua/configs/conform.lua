@@ -4,8 +4,12 @@ local options = {
         -- c_cpp = {"clang-format"},
         cpp = { "clang-format" },
         c = { "clang-format" },
-        python = { "isort", "black" },
+        python = { "ruff_fix", "ruff_format" },
         yaml = { "prettier" },
+        xml = { "prettier" },
+        xacro = { "prettier" },
+        urdf = { "prettier" },
+        srdf = { "prettier" },
         -- css = { "prettier" },
         -- html = { "prettier" },
     },
@@ -14,17 +18,7 @@ local options = {
         -- C & C++
         ["clang-format"] = {
             prepend_args = {
-                "-style={ \
-                        IndentWidth: 4, \
-                        TabWidth: 4, \
-                        UseTab: Never, \
-                        AccessModifierOffset: 0, \
-                        IndentAccessModifiers: true, \
-                        PackConstructorInitializers: Never, \
-                        ColumnLimit: 120, \
-                        BreakBeforeBraces: Allman, \
-                        AllowShortFunctionsOnASingleLine: true, \
-                        BinPackArguments: false}",
+                "-style=file",
             },
         },
         -- -- Golang
@@ -44,20 +38,7 @@ local options = {
         --         "--quote-style", "AutoPreferDouble",
         --     },
         -- },
-        -- -- Python
-        black = {
-            prepend_args = {
-                "--fast",
-                "--line-length",
-                "80",
-            },
-        },
-        isort = {
-            prepend_args = {
-                "--profile",
-                "black",
-            },
-        },
+        -- Python formatting/linting is handled by Ruff to match repo pre-commit.
     },
 
     format_on_save = {
