@@ -1,29 +1,26 @@
-### PreRequisite
-```bash
-sudo apt install luarocks xclip 
-```
+# Neovim Config
 
-```bash
-sudo apt update
-sudo apt install -y python3-venv python3-pip 
-```
+This repo contains a personal [NvChad](https://github.com/NvChad/NvChad) based Neovim setup.
 
-For Python
-```bash
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-sudo apt install -y nodejs
-```
-After Installing and cloning nvim config, :
-open `nvim` and perform `:MasonInstallAll` inside nvim. 
+Use these docs:
 
-### Troubleshooting
-If `clang` not working, install globally and manually link to the mason. 
+- [SETUP.md](./SETUP.md) for installation, dependencies, and first boot
+- [USAGE.md](./USAGE.md) for daily workflow, search, and shortcuts
 
-```bash
-# to set up clang-format in nvim if :MasonInstall clang-format fails:
-ln -sf /usr/bin/clang-format ~/.local/share/nvim/mason/bin/clang-format                                 
-mkdir -p ~/.local/share/nvim/mason/packages/clang-format
-touch ~/.local/share/nvim/mason/packages/clang-format/MASON
-echo "/usr/bin/clang-format" > ~/.local/share/nvim/mason/packages/clang-format/exec
-chmod +x ~/.local/share/nvim/mason/packages/clang-format/exec
-```
+## Summary
+
+- Base: NvChad `v2.5`
+- Leader key: `Space`
+- Theme: `ayu_dark`
+- Main languages configured: Lua, C/C++, Python, YAML, XML
+- Extra plugin enabled: `github/copilot.vim`
+
+## Local Customizations
+
+- Insert mode `jk` exits to normal mode
+- `;` enters command mode
+- Indentation defaults to 4 spaces
+- Format on save is enabled through `conform.nvim`
+- Linting runs on buffer enter, write, and insert leave
+
+For the exact install and usage details, see the linked docs above.
