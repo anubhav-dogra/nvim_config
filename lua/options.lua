@@ -4,6 +4,9 @@ require "nvchad.options"
 
 local o = vim.o
 
+o.number = true
+o.relativenumber = true
+
 --Indenting
 o.shiftwidth = 4
 o.tabstop = 4
